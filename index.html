@@ -1,123 +1,143 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parcours Analyste Cybersécurité</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Parcours Analyste Cybersécurité</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-J3Z1PN2B5D"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-J3Z1PN2B5D');
-    import { API } from 'aws-amplify';
-import { createContact } from './graphql/mutations';
-
-async function sendMessage(event) {
-  event.preventDefault();
-
-  const formData = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    message: document.getElementById("message").value,
-    createdAt: new Date().toISOString()
-  };
-
-  await API.graphql({
-    query: createContact,
-    variables: { input: formData }
-  });
-
-  alert("Message envoyé avec succès !");
-}
-
-</script>
 <body>
-    <!-- En-tête -->
-    <header>
-        <img src="images/logo.jpg" alt="Logo cybersécurité" class="logo">
-        <nav>
-            <ul>
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#motivation">Pourquoi la cybersécurité ?</a></li>
-                <li><a href="#parcours">Mon parcours</a></li>
-                <li><a href="#contacts">Contacts</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- En-tête -->
+  <header>
+    <img src="images/logo.jpg" alt="Logo cybersécurité" class="logo" />
+    <nav>
+      <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#motivation">Pourquoi la cybersécurité ?</a></li>
+        <li><a href="#parcours">Mon parcours</a></li>
+        <li><a href="#contacts">Contacts</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <!-- Section Accueil -->
-        <section id="accueil">
-            <h1>Bienvenue sur mon site vitrine</h1>
-            <p>Je suis en formation pour devenir <strong>Analyste en Cybersécurité</strong>. 
-            Ce site présente mon choix de parcours, mes objectifs et les compétences que je développe.</p>
-            <img src="images/cyber.jpg" alt="Illustration cybersécurité" class="illustration">
-        </section>
+  <main>
+    <!-- Section Accueil -->
+    <section id="accueil">
+      <h1>Bienvenue sur mon site vitrine</h1>
+      <p>Je suis en formation pour devenir <strong>Analyste en Cybersécurité</strong>.
+      Ce site présente mon choix de parcours, mes objectifs et les compétences que je développe.</p>
+      <img src="images/cyber.jpg" alt="Illustration cybersécurité" class="illustration" />
+    </section>
 
-        <!-- Section Motivation -->
-        <section id="motivation">
-            <h2>Pourquoi la cybersécurité ?</h2>
-            <p>La cybersécurité est devenue un enjeu majeur dans le monde numérique. 
-            Les entreprises, les gouvernements et les particuliers doivent protéger leurs données contre les menaces croissantes 
-            telles que les attaques informatiques, le piratage et les ransomwares.</p>
-            <p>J’ai choisi ce parcours car il allie <strong>analyse, protection et innovation</strong>. 
-            Mon objectif est de contribuer à la sécurité des systèmes d’information et à la confiance numérique.</p>
-        </section>
+    <!-- Section Motivation -->
+    <section id="motivation">
+      <h2>Pourquoi la cybersécurité ?</h2>
+      <p>La cybersécurité est devenue un enjeu majeur dans le monde numérique.
+      Les entreprises, les gouvernements et les particuliers doivent protéger leurs données contre les menaces croissantes
+      telles que les attaques informatiques, le piratage et les ransomwares.</p>
+      <p>J’ai choisi ce parcours car il allie <strong>analyse, protection et innovation</strong>.
+      Mon objectif est de contribuer à la sécurité des systèmes d’information et à la confiance numérique.</p>
+    </section>
 
-        <!-- Section Parcours -->
-        <section id="parcours">
-            <h2>Mon parcours</h2>
-            <article>
-                <h3>Fondations IT</h3>
-                <p>Apprentissage des bases en réseaux, systèmes et programmation. 
-                Compréhension des protocoles TCP/IP, gestion des systèmes Linux/Windows et introduction au cloud.</p>
-            </article>
-            <article>
-                <h3>Cybersécurité</h3>
-                <p>Étude des menaces, cryptographie, sécurité des applications et gestion des incidents. 
-                Mise en pratique avec des laboratoires de simulation d’attaques et défenses.</p>
-            </article>
-            <article>
-                <h3>DevOps & Cloud</h3>
-                <p>Automatisation, CI/CD, déploiement sécurisé sur le cloud (Azure, AWS). 
-                Intégration de la sécurité dans les pipelines DevOps.</p>
-            </article>
-            <article>
-                <h3>Objectifs futurs</h3>
-                <p>Me spécialiser en <strong>analyse des menaces</strong> et en <strong>sécurité des infrastructures cloud</strong>, 
-                afin de devenir un expert reconnu dans le domaine.</p>
-            </article>
-        </section>
+    <!-- Section Parcours -->
+    <section id="parcours">
+      <h2>Mon parcours</h2>
+      <article>
+        <h3>Fondations IT</h3>
+        <p>Apprentissage des bases en réseaux, systèmes et programmation.
+        Compréhension des protocoles TCP/IP, gestion des systèmes Linux/Windows et introduction au cloud.</p>
+      </article>
+      <article>
+        <h3>Cybersécurité</h3>
+        <p>Étude des menaces, cryptographie, sécurité des applications et gestion des incidents.
+        Mise en pratique avec des laboratoires de simulation d’attaques et défenses.</p>
+      </article>
+      <article>
+        <h3>DevOps & Cloud</h3>
+        <p>Automatisation, CI/CD, déploiement sécurisé sur le cloud (Azure, AWS).
+        Intégration de la sécurité dans les pipelines DevOps.</p>
+      </article>
+      <article>
+        <h3>Objectifs futurs</h3>
+        <p>Me spécialiser en <strong>analyse des menaces</strong> et en <strong>sécurité des infrastructures cloud</strong>,
+        afin de devenir un expert reconnu dans le domaine.</p>
+      </article>
+    </section>
 
-        <!-- Section Contacts -->
-        <section id="contacts">
-    <h2>Contactez-moi</h2>
-    <p>N’hésitez pas à m’envoyer un message via ce formulaire :</p>
+    <!-- Section Contacts -->
+    <section id="contacts">
+      <h2>Contactez-moi</h2>
+      <p>N’hésitez pas à m’envoyer un message via ce formulaire :</p>
 
-    <form class="contact-form" action="#" onsubmit="sendMessage(event)>
+      <form class="contact-form" action="#" onsubmit="sendMessage(event)">
         <label for="name">Votre nom :</label>
-        <input type="text" id="name" name="name" placeholder="Entrez votre nom" required>
+        <input type="text" id="name" name="name" placeholder="Entrez votre nom" required />
 
         <label for="email">Votre email :</label>
-        <input type="email" id="email" name="email" placeholder="Entrez votre email" required>
+        <input type="email" id="email" name="email" placeholder="Entrez votre email" required />
 
         <label for="message">Message :</label>
         <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
 
         <button type="submit">Envoyer</button>
-    </form>
-</section>
+      </form>
+    </section>
+  </main>
 
-    </main>
+  <!-- Pied de page -->
+  <footer>
+    <p>&copy; 2025 - Mon parcours cybersécurité</p>
+  </footer>
 
-    <!-- Pied de page -->
-    <footer>
-        <p>&copy; 2025 - Mon parcours cybersécurité</p>
-    </footer>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J3Z1PN2B5D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-J3Z1PN2B5D');
+  </script>
+
+  <!-- AppSync/Amplify: module script -->
+  <script type="module">
+    import { Amplify, API } from 'aws-amplify';
+    import config from './aws-exports.js';
+    import { createContact } from './graphql/mutations.js';
+
+    Amplify.configure(config);
+
+    async function sendMessage(event) {
+      event.preventDefault();
+
+      const formData = {
+        name: document.getElementById('name').value.trim(),
+        email: document.getElementById('email').value.trim(),
+        message: document.getElementById('message').value.trim(),
+        createdAt: new Date().toISOString()
+      };
+
+      if (!formData.name || !formData.email || !formData.message) {
+        alert('Tous les champs sont obligatoires.');
+        return;
+      }
+
+      try {
+        const result = await API.graphql({
+          query: createContact,
+          variables: { input: formData }
+        });
+        console.log('Contact créé:', result);
+        alert('Message envoyé avec succès !');
+        // Reset du formulaire
+        document.querySelector('.contact-form').reset();
+      } catch (err) {
+        console.error('Erreur envoi contact:', err);
+        alert("Une erreur est survenue. Vérifie la configuration de l'API.");
+      }
+    }
+
+    // Rendre la fonction accessible au HTML inline
+    window.sendMessage = sendMessage;
+  </script>
 </body>
 </html>
