@@ -14,6 +14,27 @@
   gtag('js', new Date());
 
   gtag('config', 'G-J3Z1PN2B5D');
+    import { API } from 'aws-amplify';
+import { createContact } from './graphql/mutations';
+
+async function sendMessage(event) {
+  event.preventDefault();
+
+  const formData = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value,
+    createdAt: new Date().toISOString()
+  };
+
+  await API.graphql({
+    query: createContact,
+    variables: { input: formData }
+  });
+
+  alert("Message envoyé avec succès !");
+}
+
 </script>
 <body>
     <!-- En-tête -->
@@ -78,7 +99,7 @@
     <h2>Contactez-moi</h2>
     <p>N’hésitez pas à m’envoyer un message via ce formulaire :</p>
 
-    <form class="contact-form" action="#" method="POST">
+    <form class="contact-form" action="#" onsubmit="sendMessage(event)>
         <label for="name">Votre nom :</label>
         <input type="text" id="name" name="name" placeholder="Entrez votre nom" required>
 
